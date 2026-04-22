@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thank You — Auvora Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #F5EDD6;
+    --gold-dark: #A07830;
+    --text: #0D0D0D;
+    --text-muted: #555550;
+    --text-hint: #999990;
+    --bg: #FFFFFF;
+    --surface: #F8F7F4;
+    --border: rgba(13,13,13,0.08);
+    --border-strong: rgba(13,13,13,0.16);
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .logo em { color: var(--gold); font-style: normal; }
+
+  .main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 2rem;
+  }
+  .card {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+  }
+  .icon-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+  }
+  .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .subtitle {
+    font-size: 17px;
+    color: var(--text-muted);
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .steps {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    text-align: left;
+    margin-bottom: 36px;
+  }
+  .steps-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 20px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  .step:last-child { margin-bottom: 0; }
+  .step-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold-dark);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step h4 { font-size: 14px; font-weight: 500; margin-bottom: 2px; color: var(--text); }
+  .step p { font-size: 13px; color: var(--text-muted); font-weight: 300; line-height: 1.55; }
+  .btn-primary {
+    background: var(--text);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 13px 28px;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s;
+    letter-spacing: 0.2px;
+  }
+  .btn-primary:hover { opacity: 0.84; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  .footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-right { font-size: 12px; color: var(--text-hint); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .icon-wrap { animation: fadeUp 0.5s ease both; }
+  .title { animation: fadeUp 0.5s 0.1s ease both; }
+  .subtitle { animation: fadeUp 0.5s 0.2s ease both; }
+  .steps { animation: fadeUp 0.5s 0.3s ease both; }
+  .btn-primary { animation: fadeUp 0.5s 0.4s ease both; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">AUVORA <em>DIGITAL</em></a>
+  </div>
+</nav>
+
+<div class="main">
+  <div class="card">
+
+    <div class="icon-wrap">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A07830" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+    </div>
+
+    <div class="title">Thank you,<br>we're on it.</div>
+    <p class="subtitle">Your quote request has been received. I'll review your details and get back to you within 24 hours with a tailored proposal.</p>
+
+    <div class="steps">
+      <div class="steps-title">What happens next</div>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h4>I review your request</h4>
+          <p>I'll go through your goals, business details, and budget to understand what you need.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h4>You receive a tailored proposal</h4>
+          <p>Within 24 hours I'll send you a clear, personalised proposal — no generic templates.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h4>We kick things off</h4>
+          <p>If everything looks good, we can get started straight away. No lock-in contracts.</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn-primary">← Back to Auvora Digital</a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="logo" style="font-size:18px;">AUVORA <em>DIGITAL</em></a>
+    <div class="footer-right">© 2026 Auvora Digital · auvoradigital.com</div>
+  </div>
+</footer>
+
+</body>
+</html>
