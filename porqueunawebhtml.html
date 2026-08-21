@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>¿Por qué tu negocio necesita una buena página web? — Auvora Digital</title>
+<meta name="description" content="Una web profesional no es un gasto — es la herramienta de ventas más importante de tu negocio. Descubrí por qué en 2026 no podés ignorarla." />
+<link rel="canonical" href="https://auvoradigital.com/por-que-necesitas-web.html" />
+<meta name="keywords" content="página web para negocios, diseño web Córdoba, por qué tener una web, marketing digital Argentina, Auvora Digital" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #F5EDD6;
+    --gold-dark: #A07830;
+    --text: #0D0D0D;
+    --text-muted: #555550;
+    --text-hint: #999990;
+    --bg: #FFFFFF;
+    --surface: #F8F7F4;
+    --border: rgba(13,13,13,0.08);
+    --radius: 12px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-back {
+    font-size: 13px;
+    color: var(--text-hint);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--text); }
+
+  /* Hero */
+  .hero {
+    background: var(--surface);
+    padding: 72px 2rem 56px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    background: var(--gold-light);
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.15;
+    max-width: 720px;
+    margin: 0 auto 20px;
+  }
+  .hero h1 em { color: var(--gold); font-style: italic; }
+  .hero-meta {
+    font-size: 13px;
+    color: var(--text-hint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 5px; }
+
+  /* Article */
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 2rem 80px;
+  }
+  .article-wrap p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.85;
+    margin-bottom: 24px;
+  }
+  .article-wrap h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text);
+    margin: 48px 0 16px;
+    line-height: 1.2;
+  }
+  .article-wrap h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text);
+    margin: 32px 0 12px;
+  }
+  .article-wrap strong { color: var(--text); font-weight: 500; }
+
+  /* Highlight box */
+  .highlight {
+    background: var(--gold-light);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 20px 24px;
+    margin: 32px 0;
+  }
+  .highlight p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin: 0;
+    font-style: italic;
+  }
+  .highlight strong { color: var(--gold-dark); }
+
+  /* Stat boxes */
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 36px 0;
+  }
+  .stat-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--gold-dark);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-hint);
+    line-height: 1.4;
+  }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0 28px;
+  }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+  .checklist li::before {
+    content: '✓';
+    color: var(--gold);
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* CTA */
+  .cta-box {
+    background: var(--text);
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: center;
+    margin-top: 56px;
+  }
+  .cta-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .cta-box p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 24px;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 2rem;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-hint);
+  }
+  footer a { color: var(--text-hint); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .stats { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">AUVORA <span>DIGITAL</span></a>
+    <a href="/blog.html" class="nav-back">← Volver al blog</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Diseño Web · Marketing Digital</div>
+  <h1>¿Por qué tu negocio necesita<br>una buena <em>página web</em>?</h1>
+  <div class="hero-meta">
+    <span>Por Juan Evangelisti</span>
+    <span>·</span>
+    <span>Agosto 2026</span>
+    <span>·</span>
+    <span>7 min de lectura</span>
+  </div>
+</div>
+
+<div class="article-wrap">
+
+  <p>Si tenés un negocio en 2026 y no tenés una web profesional, estás perdiendo clientes todos los días. No es una exageración — es simplemente lo que pasa cuando alguien te busca en Google y no te encuentra, o peor: te encuentra pero lo que ve no genera confianza.</p>
+
+  <p>Una página web bien hecha no es un gasto. Es la herramienta de ventas más importante que puede tener tu negocio — disponible las 24 horas, los 7 días de la semana, sin que tengas que estar presente.</p>
+
+  <div class="highlight">
+    <p><strong>Para pensarlo así:</strong> cuando alguien no te conoce y quiere saber más sobre tu negocio, lo primero que hace es buscarte en Google. Lo que encuentre en esos primeros segundos define si te contacta o sigue buscando.</p>
+  </div>
+
+  <h2>El primer contacto ya no es presencial</h2>
+
+  <p>Durante años, los negocios crecieron por el boca a boca. Alguien te recomendaba, llamaban, venían. Funcionaba — y sigue funcionando. Pero hoy ese proceso cambió: antes de llamar, antes de ir, antes de preguntar, la persona busca en Google.</p>
+
+  <p>El momento en que alguien escribe tu nombre o tu rubro en el buscador es el momento más valioso que tenés. Y si no estás ahí, o si lo que encuentran no los convence, perdiste esa oportunidad.</p>
+
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-num">97%</div>
+      <div class="stat-label">de los consumidores busca negocios locales online antes de decidir</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">75%</div>
+      <div class="stat-label">juzga la credibilidad de una empresa por el diseño de su web</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">3 seg</div>
+      <div class="stat-label">es el tiempo promedio para que un visitante decida si se queda o se va</div>
+    </div>
+  </div>
+
+  <h2>Una web no es solo "estar en internet"</h2>
+
+  <p>Muchos negocios tienen una web — pero tenerla no alcanza. Una web mal diseñada, lenta o desactualizada puede hacer más daño que no tener ninguna. El cliente entra, ve algo que no le genera confianza y se va con la competencia.</p>
+
+  <p>Una buena web hace varias cosas a la vez:</p>
+
+  <ul class="checklist">
+    <li>Genera confianza desde el primer segundo — el cliente siente que está ante un negocio serio</li>
+    <li>Explica claramente qué ofrecés y por qué elegirte a vos</li>
+    <li>Facilita el contacto — botón de WhatsApp, formulario, teléfono</li>
+    <li>Funciona bien en el celular — donde la mayoría busca hoy</li>
+    <li>Carga rápido — porque cada segundo de espera se traduce en clientes perdidos</li>
+    <li>Aparece en Google cuando alguien busca lo que vos ofrecés</li>
+  </ul>
+
+  <h2>Instagram no reemplaza a una web</h2>
+
+  <p>Uno de los errores más comunes que veo es pensar que tener Instagram alcanza. Las redes sociales son excelentes para conectar con tu audiencia, mostrar el día a día y generar comunidad. Pero no reemplazan a una web por varias razones.</p>
+
+  <p>Primero, no controlás nada en Instagram — si mañana cambia el algoritmo o la plataforma decide limitar tu alcance, tu presencia desaparece. Con una web propia, eso no pasa.</p>
+
+  <p>Segundo, Google no indexa tu Instagram de la misma forma que indexa tu web. Si querés aparecer cuando alguien busca "restaurante en Córdoba" o "plomero en Nueva Córdoba", necesitás una web optimizada para eso.</p>
+
+  <div class="highlight">
+    <p><strong>La combinación ideal:</strong> una web profesional como base sólida + redes sociales para generar comunidad + Google para captar a quien ya está buscando lo que ofrecés.</p>
+  </div>
+
+  <h2>¿Qué hace que una web sea realmente buena?</h2>
+
+  <p>No se trata solo de que se vea linda. Una web efectiva está pensada para convertir visitas en consultas y consultas en clientes. Eso implica:</p>
+
+  <h3>Diseño claro y profesional</h3>
+  <p>El diseño comunica antes que las palabras. Un sitio limpio, con buena tipografía y jerarquía visual clara transmite profesionalismo y genera confianza inmediata.</p>
+
+  <h3>Velocidad de carga</h3>
+  <p>Google penaliza las webs lentas en el posicionamiento. Y los usuarios las abandonan. Una web bien construida carga en menos de 3 segundos en cualquier dispositivo.</p>
+
+  <h3>Optimización para móvil</h3>
+  <p>Más del 60% del tráfico web hoy viene de celulares. Si tu web no se ve bien en el teléfono, estás perdiendo más de la mitad de tus visitantes potenciales.</p>
+
+  <h3>SEO — aparecer en Google</h3>
+  <p>Una web que nadie encuentra no sirve de nada. El SEO (posicionamiento en buscadores) hace que Google te muestre cuando alguien busca lo que vos ofrecés. No es magia — es estructura, contenido y técnica.</p>
+
+  <h3>Llamadas a la acción claras</h3>
+  <p>Cada página debe tener un objetivo claro — que el visitante llame, escriba por WhatsApp o complete un formulario. Sin un CTA claro, el visitante se va sin hacer nada.</p>
+
+  <h2>¿Cuándo es el momento de hacer la web?</h2>
+
+  <p>La respuesta corta: ahora. Cada día que pasa sin una web profesional es un día en que potenciales clientes te buscan y no te encuentran — o te encuentran y no les genera confianza suficiente para contactarte.</p>
+
+  <p>No importa si tu negocio es chico o grande, si acabás de arrancar o llevas años. Una web bien hecha es una inversión que se paga sola — porque cada cliente que entra por ese canal es un cliente que encontró tu negocio sin que vos hayas hecho nada activamente en ese momento.</p>
+
+  <div class="cta-box">
+    <h3>¿Tu negocio necesita una web profesional?</h3>
+    <p>Contame sobre tu proyecto — te armo una propuesta a medida sin compromiso y sin costo.</p>
+    <a href="https://wa.me/543518019313" target="_blank" class="cta-btn">Consulta gratis →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Auvora Digital · <a href="/">auvoradigital.com</a> · <a href="/blog.html">Blog</a></p>
+</footer>
+
+</body>
+</html>
