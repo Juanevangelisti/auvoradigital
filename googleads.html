@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Google Ads vs Meta Ads: ¿Cuál es mejor para tu negocio? — Auvora Digital</title>
+<meta name="description" content="¿Google Ads o Meta Ads? Descubrí las diferencias clave entre publicidad en buscadores y redes sociales, y cuál conviene más según tu negocio." />
+<link rel="canonical" href="https://auvoradigital.com/google-ads-vs-meta-ads.html" />
+<meta name="keywords" content="Google Ads vs Meta Ads, Facebook Ads, publicidad digital Argentina, marketing digital Córdoba, Auvora Digital" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #F5EDD6;
+    --gold-dark: #A07830;
+    --text: #0D0D0D;
+    --text-muted: #555550;
+    --text-hint: #999990;
+    --bg: #FFFFFF;
+    --surface: #F8F7F4;
+    --border: rgba(13,13,13,0.08);
+    --radius: 12px;
+    --blue: #1877F2;
+    --blue-light: #E8F0FE;
+    --google-red: #EA4335;
+    --google-light: #FEE8E6;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-back {
+    font-size: 13px;
+    color: var(--text-hint);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--text); }
+
+  .hero {
+    background: var(--surface);
+    padding: 72px 2rem 56px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    background: var(--gold-light);
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.15;
+    max-width: 720px;
+    margin: 0 auto 20px;
+  }
+  .hero h1 em { color: var(--gold); font-style: italic; }
+  .hero-meta {
+    font-size: 13px;
+    color: var(--text-hint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 2rem 80px;
+  }
+  .article-wrap p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.85;
+    margin-bottom: 24px;
+  }
+  .article-wrap h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text);
+    margin: 48px 0 16px;
+    line-height: 1.2;
+  }
+  .article-wrap h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text);
+    margin: 32px 0 12px;
+  }
+  .article-wrap strong { color: var(--text); font-weight: 500; }
+
+  .highlight {
+    background: var(--gold-light);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 20px 24px;
+    margin: 32px 0;
+  }
+  .highlight p { font-size: 15px; color: var(--text-muted); margin: 0; font-style: italic; }
+  .highlight strong { color: var(--gold-dark); }
+
+  /* Comparison cards */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .compare-card {
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 1px solid var(--border);
+  }
+  .compare-card.google { background: var(--google-light); border-color: rgba(234,67,53,0.2); }
+  .compare-card.meta { background: var(--blue-light); border-color: rgba(24,119,242,0.2); }
+  .compare-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .compare-card.google h4 { color: var(--google-red); }
+  .compare-card.meta h4 { color: var(--blue); }
+  .compare-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .compare-card ul li {
+    font-size: 13px;
+    color: var(--text-muted);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .compare-card.google ul li::before { content: "✓"; position: absolute; left: 0; color: var(--google-red); font-size: 11px; }
+  .compare-card.meta ul li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-size: 11px; }
+
+  /* Table */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0;
+    font-size: 14px;
+  }
+  .compare-table th {
+    background: var(--text);
+    color: #fff;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .compare-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    vertical-align: top;
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table td:first-child { font-weight: 500; color: var(--text); width: 30%; }
+  .google-col { color: var(--google-red) !important; font-weight: 500 !important; }
+  .meta-col { color: var(--blue) !important; font-weight: 500 !important; }
+
+  /* Casos de uso */
+  .use-case {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+  .use-case h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .use-case p { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; }
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-right: 6px;
+    margin-bottom: 8px;
+  }
+  .badge.google { background: var(--google-light); color: var(--google-red); }
+  .badge.meta { background: var(--blue-light); color: var(--blue); }
+  .badge.both { background: var(--gold-light); color: var(--gold-dark); }
+
+  .checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0 28px;
+  }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+  .checklist li::before { content: '✓'; color: var(--gold); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+
+  .cta-box {
+    background: var(--text);
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: center;
+    margin-top: 56px;
+  }
+  .cta-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .cta-box p { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+  .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 2rem; text-align: center; font-size: 12px; color: var(--text-hint); }
+  footer a { color: var(--text-hint); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">AUVORA <span>DIGITAL</span></a>
+    <a href="/blog.html" class="nav-back">← Volver al blog</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Google Ads · Meta Ads · Publicidad Digital</div>
+  <h1>Google Ads vs Meta Ads:<br><em>¿Cuál es mejor para tu negocio?</em></h1>
+  <div class="hero-meta">
+    <span>Por Juan Evangelisti</span>
+    <span>·</span>
+    <span>Agosto 2026</span>
+    <span>·</span>
+    <span>8 min de lectura</span>
+  </div>
+</div>
+
+<div class="article-wrap">
+
+  <p>Una de las preguntas más frecuentes que me hacen los dueños de negocios es esta: <strong>¿invierto en Google Ads o en Meta Ads?</strong> La respuesta honesta es que depende — pero no de forma arbitraria. Hay criterios claros para elegir uno, el otro, o los dos.</p>
+
+  <p>En este artículo te explico las diferencias clave, en qué situaciones conviene cada uno y cómo pensar la decisión según tu negocio, tu presupuesto y tus objetivos.</p>
+
+  <div class="highlight">
+    <p><strong>Lo más importante antes de arrancar:</strong> Google Ads y Meta Ads no son rivales — son herramientas distintas que resuelven problemas distintos. La clave está en entender cuál problema querés resolver.</p>
+  </div>
+
+  <h2>¿Qué es Google Ads?</h2>
+
+  <p>Google Ads es publicidad en el buscador de Google. Cuando alguien escribe "plomero en Córdoba" o "hotel en Alta Gracia" y aparecen resultados con la etiqueta "Patrocinado", eso es Google Ads.</p>
+
+  <p>La lógica es simple: <strong>capturás intención de compra</strong>. La persona ya está buscando lo que vos ofrecés — solo tenés que aparecer en el momento justo. Por eso se le llama publicidad de búsqueda o SEM (Search Engine Marketing).</p>
+
+  <div class="compare-card google" style="margin: 24px 0;">
+    <h4>🔴 Google Ads — lo que necesitás saber</h4>
+    <ul>
+      <li>Aparecés cuando alguien busca activamente tu producto o servicio</li>
+      <li>Pagás por click — solo cuando alguien hace click en tu anuncio</li>
+      <li>Resultados más rápidos que el SEO orgánico</li>
+      <li>Ideal para negocios con demanda existente en Google</li>
+      <li>Mayor intención de compra — el usuario ya quiere comprar</li>
+    </ul>
+  </div>
+
+  <h2>¿Qué es Meta Ads?</h2>
+
+  <p>Meta Ads es publicidad en Facebook e Instagram. A diferencia de Google, acá no estás capturando una búsqueda — estás <strong>interrumpiendo el scroll</strong> de alguien con un anuncio mientras navega por sus redes sociales.</p>
+
+  <p>Eso no es malo — pero es diferente. La persona no estaba buscando tu producto. Vos se lo mostrás porque tu segmentación indica que podría estar interesada. Por eso se dice que Meta Ads genera demanda, mientras que Google Ads la captura.</p>
+
+  <div class="compare-card meta" style="margin: 24px 0;">
+    <h4>🔵 Meta Ads — lo que necesitás saber</h4>
+    <ul>
+      <li>Aparecés en el feed de personas que podrían estar interesadas</li>
+      <li>Segmentación por intereses, comportamientos y datos demográficos</li>
+      <li>Excelente para contenido visual — fotos, videos, reels</li>
+      <li>Ideal para crear awareness y llegar a audiencias nuevas</li>
+      <li>Generalmente más económico por impresión que Google</li>
+    </ul>
+  </div>
+
+  <h2>Las diferencias clave</h2>
+
+  <table class="compare-table">
+    <tr>
+      <th>Criterio</th>
+      <th style="color:#EA4335;">Google Ads</th>
+      <th style="color:#1877F2;">Meta Ads</th>
+    </tr>
+    <tr>
+      <td>Tipo de usuario</td>
+      <td>Está buscando activamente</td>
+      <td>Está navegando pasivamente</td>
+    </tr>
+    <tr>
+      <td>Intención</td>
+      <td class="google-col">Alta — quiere comprar</td>
+      <td class="meta-col">Media — puede interesarse</td>
+    </tr>
+    <tr>
+      <td>Formato</td>
+      <td>Texto + extensiones</td>
+      <td>Imagen, video, carrusel</td>
+    </tr>
+    <tr>
+      <td>Costo</td>
+      <td>Mayor CPC — mayor intención</td>
+      <td>Menor CPM — mayor alcance</td>
+    </tr>
+    <tr>
+      <td>Resultados</td>
+      <td>Más rápidos en conversión</td>
+      <td>Más lentos — requiere más ciclos</td>
+    </tr>
+    <tr>
+      <td>Ideal para</td>
+      <td>Servicios, productos con búsqueda</td>
+      <td>Marca, productos visuales, awareness</td>
+    </tr>
+  </table>
+
+  <h2>¿Cuándo usar cada uno?</h2>
+
+  <div class="use-case">
+    <span class="badge google">Google Ads</span>
+    <h4>Usá Google Ads cuando...</h4>
+    <p>Tu producto o servicio ya tiene demanda en Google — la gente lo busca activamente. Ejemplos: estudios jurídicos, hoteles, plomeros, dentistas, servicios de mudanzas, clínicas. Si alguien puede escribir en Google lo que vos ofrecés, Google Ads es tu canal.</p>
+  </div>
+
+  <div class="use-case">
+    <span class="badge meta">Meta Ads</span>
+    <h4>Usá Meta Ads cuando...</h4>
+    <p>Querés llegar a personas antes de que te busquen. Ideal para productos nuevos, marcas que quieren crecer en awareness, e-commerce con productos visuales, eventos, lanzamientos o negocios que quieren expandir su audiencia más allá de quien ya los conoce.</p>
+  </div>
+
+  <div class="use-case">
+    <span class="badge both">Ambos</span>
+    <h4>Usá los dos cuando...</h4>
+    <p>Tenés presupuesto suficiente y querés maximizar resultados. Google captura a quien ya te busca. Meta llega a quien todavía no te conoce. Juntos cubren todo el embudo — desde el primer impacto hasta la conversión.</p>
+  </div>
+
+  <h2>¿Y el presupuesto?</h2>
+
+  <p>Con presupuesto limitado, mi recomendación general es <strong>empezar por Google Ads</strong>. La razón es simple: la intención de compra es mayor. Una persona que busca "abogado laboral Córdoba" está mucho más cerca de contratar que alguien que ve un anuncio de un abogado en Instagram mientras mira fotos de sus amigos.</p>
+
+  <p>Con más presupuesto disponible, la combinación de ambos es mucho más potente. Google para capturar la demanda existente. Meta para generar demanda nueva y hacer retargeting — mostrarle tu anuncio a alguien que ya visitó tu web pero no contactó.</p>
+
+  <div class="highlight">
+    <p><strong>Una estrategia que funciona muy bien:</strong> usar Meta Ads para generar awareness y llevar tráfico a la web, y Google Ads para capturar retargeting de quienes ya mostraron interés. El costo por conversión suele bajar significativamente.</p>
+  </div>
+
+  <h2>¿Cómo se mide el éxito?</h2>
+
+  <p>En cualquiera de los dos canales, las métricas que importan son las que se traducen en negocio real:</p>
+
+  <ul class="checklist">
+    <li><strong>ROAS</strong> — cuánto ingreso generás por cada peso invertido en ads</li>
+    <li><strong>CPA</strong> — cuánto te cuesta conseguir un cliente o una consulta</li>
+    <li><strong>Tasa de conversión</strong> — qué porcentaje de los clicks se convierten en contactos</li>
+    <li><strong>Calidad del lead</strong> — no solo cuántos contactos, sino qué tan calificados son</li>
+  </ul>
+
+  <p>El CTR (click through rate) y las impresiones son métricas secundarias — dan contexto pero no pagan las cuentas. Lo que importa es cuánto ingreso genera cada peso que invertís.</p>
+
+  <h2>Conclusión</h2>
+
+  <p>No hay una respuesta universal — pero sí hay una forma correcta de pensar la decisión. Si tu negocio tiene demanda en Google y querés resultados rápidos, empezá por Google Ads. Si querés construir marca, llegar a audiencias nuevas o tenés un producto muy visual, Meta Ads es tu canal.</p>
+
+  <p>Y si podés hacer los dos de forma inteligente, los resultados se potencian mutuamente.</p>
+
+  <p>Lo más importante es no elegir por moda o por lo que hace la competencia — elegir según tus objetivos, tu presupuesto y el comportamiento real de tus clientes.</p>
+
+  <div class="cta-box">
+    <h3>¿No sabés cuál conviene para tu negocio?</h3>
+    <p>Contame sobre tu negocio y te digo qué canal tiene más sentido — sin compromiso y sin costo.</p>
+    <a href="https://wa.me/543518019313" target="_blank" class="cta-btn">Consulta gratis →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Auvora Digital · <a href="/">auvoradigital.com</a> · <a href="/blog.html">Blog</a></p>
+</footer>
+
+</body>
+</html>
