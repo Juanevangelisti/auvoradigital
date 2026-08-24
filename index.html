@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Auvora Digital — Digital Marketing Specialist</title>
-<meta name="description" content="I help local businesses get found online through SEO, Google Ads, AI SEO & GEO and website design. Personalised strategy tailored to your goals. Based in Australia, working worldwide." />
+<title>Auvora Digital — Marketing Digital en Córdoba, Argentina</title>
+<meta name="description" content="Especialista en marketing digital con base en Córdoba, Argentina — SEO, Google Ads, AI SEO & GEO y diseño web. Estrategia personalizada para negocios en Argentina y el mundo." />
 <link rel="canonical" href="https://auvoradigital.com/" />
+<link rel="alternate" hreflang="es" href="https://auvoradigital.com/" />
+<link rel="alternate" hreflang="en" href="https://auvoradigital.com/index-en.html" />
+<link rel="alternate" hreflang="x-default" href="https://auvoradigital.com/" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -18,14 +21,24 @@
   "name": "Auvora Digital",
   "url": "https://auvoradigital.com",
   "logo": "https://auvoradigital.com/logo.png",
-  "description": "Auvora Digital is a certified digital marketing specialist helping businesses grow online through SEO, Google Ads, Meta Ads, Google Analytics and AI SEO & GEO. Based in Australia, available worldwide.",
+  "description": "Auvora Digital is a certified digital marketing specialist based in Córdoba, Argentina, helping businesses grow online through SEO, Google Ads, Meta Ads, Google Analytics and AI SEO & GEO. Serving clients in Argentina, Australia and worldwide.",
   "founder": {
     "@type": "Person",
     "name": "Juan Evangelisti",
     "jobTitle": "Digital Marketing Specialist",
     "url": "https://www.linkedin.com/in/juan-evangelisti-baa3b5202"
   },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Córdoba",
+    "addressRegion": "Córdoba",
+    "addressCountry": "AR"
+  },
   "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Argentina"
+    },
     {
       "@type": "Country",
       "name": "Australia"
@@ -54,7 +67,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "SEO & Local SEO",
-          "description": "Rank higher on Google with technical audits, on-page optimisation, content strategy and local SEO for Australian businesses."
+          "description": "Rank higher on Google with technical audits, on-page optimisation, content strategy and local SEO for businesses in Argentina, Australia and beyond."
         }
       },
       {
@@ -84,11 +97,11 @@
     ]
   },
   "contactPoint": {
-    "@type": "ContactoPoint",
-    "telephone": "+61-420-571-323",
+    "@type": "ContactPoint",
+    "telephone": "+54-351-801-9313",
     "contactType": "customer service",
     "email": "hello@auvoradigital.com",
-    "availableLanguage": "English"
+    "availableLanguage": ["Spanish", "English"]
   },
   "sameAs": [
     "https://www.linkedin.com/in/juan-evangelisti-baa3b5202",
@@ -115,7 +128,7 @@
       "name": "What is Auvora Digital?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Auvora Digital is a certified digital marketing specialist based in Australia, founded by Juan Evangelisti. We help businesses grow online through SEO, Google Ads, Meta Ads, Google Analytics and AI SEO & GEO — Generative Engine Optimisation."
+        "text": "Auvora Digital is a certified digital marketing specialist based in Córdoba, Argentina, founded by Juan Evangelisti. We help businesses grow online through SEO, Google Ads, Meta Ads, Google Analytics and AI SEO & GEO — Generative Engine Optimisation."
       }
     },
     {
@@ -131,7 +144,7 @@
       "name": "What digital marketing services does Auvora Digital offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Auvora Digital offers SEO, Local SEO, Google Ads, Meta Ads (Facebook & Instagram), Google Analytics GA4, AI SEO & GEO, and website creation services for businesses in Australia and internationally."
+        "text": "Auvora Digital offers SEO, Local SEO, Google Ads, Meta Ads (Facebook & Instagram), Google Analytics GA4, AI SEO & GEO, and website creation services for businesses in Argentina, Australia and internationally."
       }
     },
     {
@@ -139,7 +152,7 @@
       "name": "How much does digital marketing cost at Auvora Digital?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Auvora Digital offers three monthly plans: Starter at $700 AUD/month, Growth at $1,100 AUD/month, and Full Stack at $1,500 AUD/month. A free quote is available at auvoradigital.com."
+        "text": "Auvora Digital doesn't work with fixed packages — pricing is tailored to each project's scope and goals, typically ranging from under $500 USD/month to $1,000+ USD/month depending on services included. A free, no-obligation quote is available at auvoradigital.com."
       }
     },
     {
@@ -418,6 +431,71 @@
     border-radius: var(--radius-pill);
     letter-spacing: 0.3px;
   }
+
+  /* ── PROJECTS ── */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .project-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+  .project-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(13,13,13,0.08);
+  }
+  .project-browser-bar {
+    height: 30px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 14px;
+  }
+  .project-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--border-strong);
+  }
+  .project-image-wrap {
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .project-image-wrap img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .project-card:hover .project-image-wrap img { transform: scale(1.035); }
+  .project-info { padding: 20px 22px 24px; }
+  .project-category {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 8px;
+  }
+  .project-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: 0.2px;
+    margin-bottom: 8px;
+  }
+  .project-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
 
   /* ── PRICING ── */
   .pricing-grid {
@@ -735,6 +813,7 @@
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .pricing-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .form-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -876,31 +955,69 @@
   </div>
 </section>
 
-<!-- CLIENTS -->
-<section id="clients" style="padding: 64px 0; border-top: 1px solid var(--border);">
+<!-- PROJECTS -->
+<section id="projects" style="padding: 88px 0; border-top: 1px solid var(--border);">
   <div class="container">
-    <div style="text-align: center; margin-bottom: 40px;">
+    <div style="text-align: center; margin-bottom: 8px;">
       <div class="section-label">Trabajé con</div>
-      <div class="section-title" style="font-size: 28px;">Algunos de los negocios con los que trabajé</div>
+      <div class="section-title" style="font-size: 32px;">Proyectos</div>
+      <p class="section-sub" style="max-width: 520px; margin: 14px auto 0;">Algunos de los sitios y proyectos digitales en los que trabajé — para clientes en Argentina y Australia.</p>
     </div>
-    <div style="display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; opacity: 0.75;">
+
+    <div class="projects-grid">
+
+      <a href="https://kolmenorsrl.com.ar" target="_blank" class="project-card">
+        <div class="project-browser-bar">
+          <span class="project-dot"></span><span class="project-dot"></span><span class="project-dot"></span>
+        </div>
+        <div class="project-image-wrap">
+          <img src="assets/projects/kolmenor.jpg" alt="Sitio web de Kolmenor SRL" loading="lazy" />
+        </div>
+        <div class="project-info">
+          <div class="project-category">Construcción · Córdoba, AR</div>
+          <div class="project-name">Kolmenor SRL</div>
+          <p class="project-desc">Sitio institucional desde cero — diseño, desarrollo y despliegue, con foco en transmitir trayectoria y confianza.</p>
+        </div>
+      </a>
+
+      <a href="https://lamersunshine.com.au" target="_blank" class="project-card">
+        <div class="project-browser-bar">
+          <span class="project-dot"></span><span class="project-dot"></span><span class="project-dot"></span>
+        </div>
+        <div class="project-image-wrap">
+          <img src="assets/projects/lamer.jpg" alt="Sitio web de La Mer Sunshine Beach" loading="lazy" />
+        </div>
+        <div class="project-info">
+          <div class="project-category">Hospitalidad · Sunshine Coast, AU</div>
+          <div class="project-name">La Mer Sunshine Beach</div>
+          <p class="project-desc">Auditoría y optimización SEO/GEO completa — contenido, metadatos y estructura para posicionar el sitio en Google.</p>
+        </div>
+      </a>
+
+      <a href="https://auvoradigital.com" target="_blank" class="project-card">
+        <div class="project-browser-bar">
+          <span class="project-dot"></span><span class="project-dot"></span><span class="project-dot"></span>
+        </div>
+        <div class="project-image-wrap">
+          <img src="assets/projects/auvora.png" alt="Sitio web de Auvora Digital" loading="lazy" />
+        </div>
+        <div class="project-info">
+          <div class="project-category">Marketing Digital · Córdoba, AR</div>
+          <div class="project-name">Auvora Digital</div>
+          <p class="project-desc">Este mismo sitio — diseñado y desarrollado de punta a punta, con SEO, GEO y Schema markup implementado.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; opacity: 0.7; margin-top: 44px; padding-top: 36px; border-top: 1px solid var(--border);">
       <div style="text-align: center;">
-        <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--text); letter-spacing: 1px;">La Mer</div>
-        <div style="font-size: 11px; color: var(--text-hint); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase;">Sunshine Beach · AU</div>
-      </div>
-      <div style="width: 1px; height: 40px; background: var(--border);"></div>
-      <div style="text-align: center;">
-        <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--text); letter-spacing: 1px;">SYS Global Pay</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; color: var(--text); letter-spacing: 1px;">SYS Global Pay</div>
         <div style="font-size: 11px; color: var(--text-hint); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase;">Fintech · AR</div>
       </div>
-      <div style="width: 1px; height: 40px; background: var(--border);"></div>
+      <div style="width: 1px; height: 36px; background: var(--border);"></div>
       <div style="text-align: center;">
-        <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--text); letter-spacing: 1px;">Kolmenor SRL</div>
-        <div style="font-size: 11px; color: var(--text-hint); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase;">Construction · AR</div>
-      </div>
-      <div style="width: 1px; height: 40px; background: var(--border);"></div>
-      <div style="text-align: center;">
-        <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--text); letter-spacing: 1px;">Alberti Abogados</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; color: var(--text); letter-spacing: 1px;">Alberti Abogados</div>
         <div style="font-size: 11px; color: var(--text-hint); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase;">Legal · AR</div>
       </div>
     </div>
