@@ -98,9 +98,8 @@
   }
   .stats div{
     padding: 24px 20px 24px 0;
-    border-right: 1px solid var(--line);
   }
-  .stats div:last-child{ border-right: none; padding-right: 0; }
+  .stats div:last-child{ padding-right: 0; }
   .stats .num{
     font-family: 'Playfair Display', serif;
     font-size: 1.7rem;
@@ -242,9 +241,8 @@
 
   @media (max-width: 720px){
     .stats{ grid-template-columns: repeat(2, 1fr); }
-    .stats div:nth-child(2){ border-right: none; }
     .stats div{ padding-bottom: 20px; }
-    .stats div:nth-child(3){ border-top: 1px solid var(--line); padding-top: 20px; border-right: none; }
+    .stats div:nth-child(3){ border-top: 1px solid var(--line); padding-top: 20px; }
     .cta-box{ padding: 36px 26px; }
     .project-body{ flex-direction: column; align-items: flex-start; }
   }
